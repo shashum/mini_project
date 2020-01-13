@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,13 +10,10 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link href="../Project/css/carousel.css" rel="stylesheet">
-    <link href="../Project/css/blog.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
-    <link href="../Project/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Project/css/core.css">
     <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
     <style>
@@ -59,47 +57,53 @@
             height: 100px;
         }
     </style>
+    <link href="../Project/css/carousel.css" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </head>
 
-<body style="padding-top: 0;">
-    <div class="container">
-        <header class="blog-header" style="height: 73.050px; padding-top: 16px;">
-            <div class="row flex-nowrap justify-content-between align-items-center" style="margin-top: 0; height: 57.550px;">
-                <div class="col-4 pt-1">
-                    <!-- <a class="text-muted" href="#">Subscribe</a> -->
-                </div>
-                <div class="col-4 text-center" id="top"  style="position: relative; height: 56.050px;">
-                    <img src="http://www.denhtlai.com/img/denhtlai-icon.png" style="height: 40px; width: 40px;border-radius: 50%;
-                    margin-bottom: 17.500px;"> 
-                    <a class="blog-header-logo text-dark" href="mainpage.html">DENH TLAI</a>
-                </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
-                    <a class="btn btn-sm btn-outline-secondary" href="../Project/Sign_in.html#sign_in" for='#sign_in' target="_blank">Sign in</a>
-                    <a class="btn btn-sm btn-outline-secondary" href="../Project/Sign_up.html" for='#sign_up' target="_blank" style="margin-left: 2%;">Sign up</a>
-                </div>
-            </div> 
-        </header>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <img src="http://www.denhtlai.com/img/denhtlai-icon.png" style="height: 50px;width: 50px;border-radius: 50%;margin-right: 7px;">
+            <a class="navbar-brand" href="file:///C:/Project/mainpage.html" target="blank">DENH TLAI</a>
+            <div class="col-4 d-flex justify-content-end align-items-center" style="margin-left: 51%;padding-right: 10px;padding-left: 0px;">
+                <a class="btn btn-sm btn-outline-light " href="../Project/Sign_in.html" for="#sign_in" target="_blank">Sign in</a>
+                <a class="btn btn-sm btn-outline-light " href="../Project/Sign_up.html" for="#sign_up" target="_blank" style="margin-left: 2%; ">Sign up</a>
+            </div>
+            <div class="collapse navbar-collapse " id="navbarCollapse ">
+            </div>
+        </nav>
+    </header>
 
-        <div class="nav-scroller mb-2" style="padding-top: 4px;">
-            <nav class="nav d-flex justify-content-between" style="padding-bottom: 0;">
-                <a class="p-2 text-muted" href="#">Phone / Accessories</a>
-                <a class="p-2 text-muted" href="#">Computer / Accessories</a>
-                <a class="p-2 text-muted" href="#">Vehicle</a>
-                <a class="p-2 text-muted" href="#">Electronic</a>
-                <a class="p-2 text-muted" href="#">Cosmetics</a>
-                <a class="p-2 text-muted" href="#">Home & Kitchen</a>
-                <a class="p-2 text-muted" href="#">Jewellery & Watch</a>
-                <a class="p-2 text-muted" href="#">Shoes</a>
-                <a class="p-2 text-muted" href="#">Tools</a>
-                <a class="p-2 text-muted" href="#">Coupon</a>
-                <a class="p-2 text-muted" href="#">Others</a>
-            </nav>
-        </div>
-    </div>
-    
-    <main role="main">
-        <div class="container marketing">
+    <main role="main ">
+        <div class="container marketing ">
             <!-- START THE FEATURETTES -->
+            <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading">The First Pioneer of Cambodian Online Auction. </h2>
@@ -117,15 +121,16 @@
                 <div class="col-md-7 ">
                     <h2 class="featurette-heading ">Location of Denh Tlai</h2>
                     <p class="lead ">Our Company do not provied the delivery system to protect customer's properties from being stolen. Therefore, If you want to Register your items or If you win the Bid, You should visit our company to take your items.<br>
-                        </p><p>Address: #56D1, St 261, Sangkat Boeung Salang, KhanToul Kork, Phnom Penh, Cambodia </p>
+                        <p>Address: #56D1, St 261, Sangkat Boeung Salang, KhanToul Kork, Phnom Penh, Cambodia </p>
                         <p>Telephone: (855) 10 51 95 65 (855) 61 41 95 6
                         </p>
                 </div>
                 <div class="col-md-5 ">
-                    <iframe width="450" height="500" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3908.927097062633!2d104.8961976!3d11.557084!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109511098d3fbb5%3A0xd8662910dfd728eb!2sDENH%20TLAI!5e0!3m2!1sen!2skh!4v1568349987340!5m2!1sen!2skh" width="500"></iframe>
+                    <iframe height="500" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3908.927097062633!2d104.8961976!3d11.557084!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109511098d3fbb5%3A0xd8662910dfd728eb!2sDENH%20TLAI!5e0!3m2!1sen!2skh!4v1568349987340!5m2!1sen!2skh"
+                        width="500"></iframe>
                 </div>
             </div>
-            <hr class="featurette-divider" style="width: 1110px">
+            <hr class="featurette-divider ">
             <!-- /END THE FEATURETTES -->
         </div>
         <!-- /.container -->
@@ -156,55 +161,16 @@
                     need anymore, and buyers can purchase the items in reasonable price. DENH TLAI can make it easy for you to find rare and one-of-a-kind items at every price-point.</p>
             </div>
         </div>
-        
         <hr>
         <!-- FOOTER -->
-        <footer class="blog-footer">
-            <br>
-            <p>&copy; 2019 DENH TLAI. All rights reserved.</p>
-            <!-- <div class="container" style="float: center;width: 70%;">
-                <p>asd</p>
-            </div> -->
-            <p><a href="About_us.html" style="text-decoration: none;" target="_blank">About Us</a> | <a href="Q&A_FAQ.html" style="text-decoration: none;" target="_blank">Customer Service</a></p>
-            <a href="https://goo.gl/xPWsqt" target="_blank"><img src="http://www.denhtlai.com/images/googlestore-logo.png" style="height: 45px"></a>
-            <a href="https://goo.gl/PJnMHo" target="_blank"><img src="http://www.denhtlai.com/images/appstore-logo.png" style="height: 45px"></a>
-            <a href="https://www.facebook.com/denhtlai/" target="_blank"><img src="img/facebook.png" style="height: 45px"></a>
-    
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>©2019 DENH TLAI. All rights reserved. </p>
+            <p class="p-2 text-muted">page built for <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> and inspired by <a href="https://twitter.com/mdo" target="_blank">@mdo</a></p>
         </footer>
-    
     </main>
-    
-    <script>
-        $(document).ready(function() {
-            // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function() {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js " integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm " crossorigin="anonymous "></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 
-
-</body></html>
+</html>

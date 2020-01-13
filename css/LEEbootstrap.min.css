@@ -235,8 +235,8 @@ th {
 
 @media print {
     *,
-    :after,
-    :before {
+     :after,
+     :before {
         color: #000!important;
         text-shadow: none!important;
         background: 0 0!important;
@@ -1436,19 +1436,19 @@ img {
 .thumbnail a>img,
 .thumbnail>img {
     display: block;
-    max-width: 100%;
-    height: auto
+    width: 120% !important;
+    margin: 5px 0px !important;
 }
 
 .img-rounded {
-    border-radius: 6px
+    border-radius: 6px;
 }
 
 .img-thumbnail {
     display: inline-block;
-    max-width: 100%;
     height: auto;
-    padding: 4px;
+    width: 24% !important;
+    padding: 0;
     line-height: 1.42857143;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -1828,6 +1828,12 @@ dt {
 
 dd {
     margin-left: 0
+}
+
+dd,
+dt,
+dl {
+    font-size: 17px !important;
 }
 
 @media (min-width:768px) {
@@ -5996,6 +6002,7 @@ a.badge:hover {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
+    height: 90%;
     -webkit-transition: border .2s ease-in-out;
     -o-transition: border .2s ease-in-out;
     transition: border .2s ease-in-out
@@ -6969,6 +6976,7 @@ button.list-group-item-danger.active:hover {
 .well {
     min-height: 20px;
     padding: 19px;
+    width: 100%;
     margin-bottom: 20px;
     background-color: #f5f5f5;
     border: 1px solid #e3e3e3;
@@ -6990,6 +6998,20 @@ button.list-group-item-danger.active:hover {
 .well-sm {
     padding: 9px;
     border-radius: 3px
+}
+
+.well1333 {
+    margin-top: 10%;
+    left: 85%;
+    width: 190px;
+    height: 250px !important;
+    border: solid;
+    position: fixed;
+    text-align: center;
+    top: 20px;
+    z-index: 999;
+    padding: 5px;
+    background-color: white;
 }
 
 .close {

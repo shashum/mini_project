@@ -8510,7 +8510,7 @@ button.bg-dark:hover {
 
 .mb-2,
 .my-2 {
-    margin-bottom: .5rem
+    margin-bottom: .5rem!important
 }
 
 .ml-2,
@@ -8666,11 +8666,9 @@ button.bg-dark:hover {
     padding: 1rem!important
 }
 
-.pt-3
-,
-.py-3 
-{
-    padding-top: 1rem
+.pt-3,
+.py-3 {
+    padding-top: 1rem!important
 }
 
 .pr-3,
@@ -8678,10 +8676,8 @@ button.bg-dark:hover {
     padding-right: 1rem!important
 }
 
-.pb-3
-/* ,
-.py-3  */
-{
+.pb-3,
+.py-3 {
     padding-bottom: 1rem!important
 }
 
