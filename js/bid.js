@@ -20,7 +20,8 @@ var br_price = 11;
 // (month + 1) + "/" + day + "/" + year + "  " + hours + ":" + minutes + ":" + seconds + "</td>" 
 
 function bid_w() {
-    document.getElementById("bid_error").innerHTML = ""
+    var date_now = new Date();
+    document.getElementById("bid_error").innerHTML = "";
     var b_price = Number(document.getElementById("mybid").value);
     var name = "Anonymous"
     if (b_price >= w_price + 0.5) {
@@ -29,7 +30,7 @@ function bid_w() {
             "<td>" + i++ + "</td>" +
             "<td >" + name + "</td>" +
             "<td >" + "$" + b_price + "</td>" +
-            "<td >" + date.toLocaleString() +
+            "<td >" + date_now.toLocaleString() +
             "</tr>";
         w_price = b_price;
         time++;
@@ -37,6 +38,9 @@ function bid_w() {
         document.getElementById("mb").innerHTML = w_price + 0.5;
         document.getElementById("cp").innerHTML = w_price;
         document.getElementById("time").innerHTML = time;
+        document.getElementById("rmb1").innerHTML = w_price + 0.5;
+        document.getElementById("rcp1").innerHTML = w_price;
+        document.getElementById("rcp11").innerHTML = w_price;
     } else {
         document.getElementById("bid_error").innerHTML = "Bid Higher Price"
     }
@@ -44,7 +48,8 @@ function bid_w() {
 }
 
 function bid_c() {
-    document.getElementById("bid_error").innerHTML = ""
+    var date_now = new Date();
+    document.getElementById("bid_error").innerHTML = "";
     var b_price = Number(document.getElementById("mybid").value);
     var name = "Anonymous"
     if (b_price >= c_price + 0.5) {
@@ -53,7 +58,7 @@ function bid_c() {
             "<td>" + i++ + "</td>" +
             "<td >" + name + "</td>" +
             "<td >" + "$" + b_price + "</td>" +
-            "<td >" + date.toLocaleString() +
+            "<td >" + date_now.toLocaleString() +
             "</tr>";
         c_price = b_price;
         time++;
@@ -61,12 +66,16 @@ function bid_c() {
         document.getElementById("mb").innerHTML = c_price + 0.5;
         document.getElementById("cp").innerHTML = c_price;
         document.getElementById("time").innerHTML = time;
+        document.getElementById("rmb2").innerHTML = c_price + 0.5;
+        document.getElementById("rcp2").innerHTML = c_price;
+        document.getElementById("rcp22").innerHTML = c_price;
     } else {
         document.getElementById("bid_error").innerHTML = "Bid Higher Price"
     }
 }
 
 function bid_b() {
+    var date_now = new Date();
     document.getElementById("bid_error").innerHTML = ""
     var b_price = Number(document.getElementById("mybid").value);
     var name = "Anonymous"
@@ -76,7 +85,7 @@ function bid_b() {
             "<td>" + i++ + "</td>" +
             "<td >" + name + "</td>" +
             "<td >" + "$" + b_price + "</td>" +
-            "<td >" + date.toLocaleString() +
+            "<td >" + date_now.toLocaleString() +
             "</tr>";
         br_price = b_price;
         time++;
@@ -84,6 +93,9 @@ function bid_b() {
         document.getElementById("mb").innerHTML = br_price + 0.5;
         document.getElementById("cp").innerHTML = br_price;
         document.getElementById("time").innerHTML = time;
+        document.getElementById("rmb3").innerHTML = br_price + 0.5;
+        document.getElementById("rcp3").innerHTML = br_price;
+        document.getElementById("rcp33").innerHTML = br_price;
     } else {
         document.getElementById("bid_error").innerHTML = "Bid Higher Price"
     }
