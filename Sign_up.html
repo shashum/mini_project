@@ -5,17 +5,7 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/sign_up.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        $('.tabs .tab').click(function() {
-            if ($(this).hasClass('signup')) {
-                $('.tabs .tab').removeClass('active');
-                $(this).addClass('active');
-                $('.cont').hide();
-                $('.signup-cont').show();
-            }
-        });
-    </script>
+    <link href="http://www.denhtlai.com/images/favicon.ico" rel="icon" type="image/ico">
 </head>
 
 <body>
@@ -43,6 +33,17 @@
         </article>
         <div class="half bg"></div>
     </section>
+    <script type="text/javascript">
+        $('.tabs .tab').click(function() {
+            if ($(this).hasClass('signup')) {
+                $('.tabs .tab').removeClass('active');
+                $(this).addClass('active');
+                $('.cont').hide();
+                $('.signup-cont').show();
+            }
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 
 </html>
